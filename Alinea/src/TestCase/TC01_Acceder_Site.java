@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class Acceder_Site {
+public class TC01_Acceder_Site {
 
 	public static void main(String[] args) throws InterruptedException {
 
