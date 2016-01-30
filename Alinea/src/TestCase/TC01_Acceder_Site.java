@@ -15,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TC01_Acceder_Site {
 
-	WebDriver driver = new FirefoxDriver();
+	WebDriver driver ;
 	private StringBuffer verificationErrors = new StringBuffer();
 	
 	

@@ -15,15 +15,15 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TC02_recherche_produit {
 	
+	WebDriver driver;
 	
-	WebDriver driver = new FirefoxDriver();
 	private StringBuffer verificationErrors = new StringBuffer();
 	
 	
 	@Test
 	public void TC02() throws Exception {
 
-		WebDriver driver = new FirefoxDriver();
+	
 		driver.get("http://www.alinea.fr");
 
 		WebElement Element_move_to_three = driver.findElement(By
