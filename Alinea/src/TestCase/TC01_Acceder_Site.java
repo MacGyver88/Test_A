@@ -3,12 +3,15 @@ package TestCase;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TC01_Acceder_Site {
-
+	
+	
+	@Test
 	public static void main(String[] args) throws InterruptedException {
 
 		
