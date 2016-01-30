@@ -14,19 +14,19 @@ public class LectureFichierExcel {
 	public static void main(String[] args) {
 		Workbook workbook = null;
 		try {
-			/* Rï¿½cupï¿½ration du classeur Excel (en lecture) */
+			/* Récupération du classeur Excel (en lecture) */
 			workbook = Workbook.getWorkbook(new File("D:\\exemple.xls"));
 			
-			/* Un fichier excel est compos de plusieurs feuilles, on y accede de la maniere suivante*/
+			/* Un fichier excel est composé de plusieurs feuilles, on y accède de la manière suivante*/
 			Sheet sheet = workbook.getSheet(0);
 			
-			/* On accï¿½de aux cellules avec la mï¿½thode getCell(indiceColonne, indiceLigne) */
+			/* On accède aux cellules avec la méthode getCell(indiceColonne, indiceLigne) */
 			Cell a1 = sheet.getCell(0,0); 
 			
-			/* On peut ï¿½galement le faire avec getCell(nomCellule) */
+			/* On peut également le faire avec getCell(nomCellule) */
 			Cell c5 = sheet.getCell("C5");
 			
-			/* On peut rï¿½cupï¿½rer le contenu d'une cellule en utilisant la mï¿½thode getContents() */
+			/* On peut récupérer le contenu d'une cellule en utilisant la méthode getContents() */
 			String contenuA1= a1.getContents();
 			String contenuC5 = c5.getContents();
 			
@@ -41,7 +41,7 @@ public class LectureFichierExcel {
 		} 
 		finally {
 			if(workbook!=null){
-				/* On ferme le worbook pour libï¿½rer la mï¿½moire */
+				/* On ferme le worbook pour libérer la mémoire */
 				workbook.close(); 
 			}
 		}
