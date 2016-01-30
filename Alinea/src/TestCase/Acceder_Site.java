@@ -11,7 +11,7 @@ public class Acceder_Site {
         WebDriver driver = new FirefoxDriver();
 		
 		driver.get("http://www.alinea.fr");
-		Assert.assertTrue(driver.getPageSource().contains("AlinÃ©a : Mobilier et DÃ©coration."));
+		Assert.assertTrue(driver.getPageSource().contains("Alinéa : Mobilier et Décoration."));
 		
 		
 		Thread.sleep(5);
