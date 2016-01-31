@@ -21,8 +21,7 @@ import org.openqa.selenium.internal.Locatable;
 
 public class TC02_recherche_produit {
 	
-	WebDriver driver;
-	
+	WebDriver driver;	
 	private StringBuffer verificationErrors = new StringBuffer();
 	
 	
