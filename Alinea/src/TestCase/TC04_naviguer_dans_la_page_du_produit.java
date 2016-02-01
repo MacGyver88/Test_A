@@ -17,7 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class TC04_naviguer_dans_la_pade_du_produit {
+public class TC04_naviguer_dans_la_page_du_produit {
 
 	
 	WebDriver driver;	
