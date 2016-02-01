@@ -22,7 +22,8 @@ public class TC03_choisir_produit {
 	
 	@Test
 	public void TC03() throws Exception {
-
+		
+		System.out.println("LogStatus.INFO - Navigating to alinea.fr");
 		driver.get("http://www.alinea.fr");
 		
 		//affichage des liste des produit
@@ -64,6 +65,7 @@ public class TC03_choisir_produit {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		System.out.println("LogStatus.INFO - Launching browser");
 	}
 
 	@After

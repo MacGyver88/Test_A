@@ -28,7 +28,7 @@ public class TC02_recherche_produit {
 	@Test
 	public void TC02() throws Exception {
 
-	
+		System.out.println("LogStatus.INFO - Navigating to alinea.fr");
 		driver.get("http://www.alinea.fr");
 
 		WebElement Element_move_to_three = driver.findElement(By
@@ -85,6 +85,7 @@ public class TC02_recherche_produit {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		System.out.println("LogStatus.INFO - Launching browser");
 	}
 
 	@After

@@ -26,6 +26,7 @@ public class TC04_naviguer_dans_la_page_du_produit {
 	@Test
 	public void TC04() throws Exception {
 	
+		System.out.println("LogStatus.INFO - Navigating to alinea.fr");
 		driver.navigate().to("http://www.alinea.fr/par-type-de-produit/les-canapes-et-fauteuils/canapes-et-banquettes.html");
 		
 		
@@ -62,6 +63,7 @@ public class TC04_naviguer_dans_la_page_du_produit {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		System.out.println("LogStatus.INFO - Launching browser");
 	}
 
 	@After
