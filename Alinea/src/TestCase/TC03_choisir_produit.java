@@ -27,7 +27,7 @@ public class TC03_choisir_produit {
 		driver.get("http://www.alinea.fr");
 		
 		//affichage des liste des produit
-		driver.findElement(By.xpath("//a[contains(text(),'CanapÃ©s, Fauteuils')]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Canapés, Fauteuils')]")).click();
 		
 		WebElement Element_move_to_produit = driver.findElement(By.xpath("//div[@id='content']/div[2]/div[8]/div/div/img"));
 		String ImageAvant = Element_move_to_produit.getAttribute("src");
