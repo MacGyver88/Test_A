@@ -48,9 +48,15 @@ public class TC04_naviguer_dans_la_page_du_produit {
 		String ImageApres = webElement.getAttribute("src"); 
         
         //comparaison entre image avant et après
+		try{
         Assert.assertFalse(ImageApres.equals(ImageAvant));
-        System.out.println(ImageAvant);
-        System.out.println("!!!!"+ImageApres);
+		System.out.println("LogStatus.PASS - Visuel du produit correspand à la miniature");
+		
+		} catch (Error e) {
+	        verificationErrors.append(e.toString());
+	        System.out.println("LogStatus.FAIL - Visuel du produit correspand à la miniature" + "<pre>" + e.toString() + "</pre>");
+	      }
+       
 
 
 
@@ -60,6 +66,7 @@ public class TC04_naviguer_dans_la_page_du_produit {
 	@Before
 	public void setUp() throws Exception {
 		
+		System.out.println("Test Alinea - Naviguer dans la page du produit");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
