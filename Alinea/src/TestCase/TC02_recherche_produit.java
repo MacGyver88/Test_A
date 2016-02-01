@@ -37,14 +37,26 @@ public class TC02_recherche_produit {
 		action.moveToElement(Element_move_to_three).build().perform();
 		
 		//résultat attendu step1
+		try{
 		assertTrue(isElementPresent(By.cssSelector("li.second-level-item.hover")));
-
+		System.out.println("LogStatus.PASS - Nouveau choix affiché ");
+		
+		} catch (Error e) {
+	        verificationErrors.append(e.toString());
+	        System.out.println("LogStatus.FAIL - Nouveau choix affiché " + "<pre>" + e.toString() + "</pre>");
+	      }
 
 		driver.findElement(By.cssSelector("a > p")).click();
 		
 		//résultat attendu step2
+		try{
 		assertEquals("Canapés, Banquettes", driver.findElement(By.cssSelector("h1")).getText());
+		System.out.println("LogStatus.PASS - Page canapés,Banquettes affichée");
 		
+		} catch (Error e) {
+	        verificationErrors.append(e.toString());
+	        System.out.println("LogStatus.FAIL - Page canapés,Banquettes affiché" + "<pre>" + e.toString() + "</pre>");
+	      }
 		
 		//Step3 scroll
 		
@@ -81,7 +93,7 @@ public class TC02_recherche_produit {
 	
 	@Before
 	public void setUp() throws Exception {
-		
+		System.out.println("Test Alinea - Recherche Produit");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
